@@ -1,4 +1,4 @@
-import { Tag, Users, Settings, Bookmark, SquarePen, LayoutGrid, LucideIcon, GraduationCap, User, CircleUserRound } from 'lucide-react';
+import { Tag, Users, Settings, Bookmark, SquarePen, LayoutGrid, LucideIcon, GraduationCap, User, CircleUserRound, Baby } from 'lucide-react';
 
 type Submenu = {
     href: string;
@@ -65,7 +65,7 @@ export function getMenuList(pathname: string): Group[] {
                     href: '/parent',
                     label: 'Parent',
                     active: pathname.includes('/parent'),
-                    icon: Bookmark,
+                    icon: Baby,
                     submenus: []
                 },
                 {

@@ -19,21 +19,22 @@ import {
 export function UserNav() {
     return (
         <DropdownMenu>
-            <TooltipProvider disableHoverableContent>
-                <Tooltip delayDuration={100}>
-                    <TooltipTrigger asChild>
-                        <DropdownMenuTrigger asChild>
-                            <Button variant='outline' className='relative h-8 w-8 rounded-full'>
-                                <Avatar className='h-8 w-8'>
-                                    <AvatarImage src='#' alt='Avatar' />
-                                    <AvatarFallback className='bg-transparent'>JD</AvatarFallback>
-                                </Avatar>
-                            </Button>
-                        </DropdownMenuTrigger>
-                    </TooltipTrigger>
-                    <TooltipContent side='bottom'>Profile</TooltipContent>
-                </Tooltip>
-            </TooltipProvider>
+            <DropdownMenuTrigger asChild>
+                <Button variant='outline' className='h-8 w-8 rounded-full'>
+                    <div className='flex space-x-2 items-end'>
+                        {/* <div className='flex flex-col space-y-1 justify-end'>
+                            <p className='text-xs font-medium leading-none'>John Doe</p>
+                            <p className='text-xs leading-none text-muted-foreground'>johndoe@example.com</p>
+                        </div> */}
+                        <div className='flex items-center border-slate-950'>
+                            <Avatar className='h-8 w-8 border-slate-700 dark:border-slate-700'>
+                                <AvatarImage src='#' alt='Avatar' />
+                                <AvatarFallback className='bg-transparent'>JD</AvatarFallback>
+                            </Avatar>
+                        </div>
+                    </div>
+                </Button>
+            </DropdownMenuTrigger>
 
             <DropdownMenuContent className='w-56' align='end' forceMount>
                 <DropdownMenuLabel className='font-normal'>
@@ -45,7 +46,7 @@ export function UserNav() {
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                     <DropdownMenuItem className='hover:cursor-pointer' asChild>
-                        <Link href='/dashboard' className='flex items-center'>
+                        <Link href='/admin' className='flex items-center'>
                             <LayoutGrid className='w-4 h-4 mr-3 text-muted-foreground' />
                             Dashboard
                         </Link>
