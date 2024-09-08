@@ -18,7 +18,7 @@ export function Navbar({ title }: NavbarProps) {
                     <SheetMenu />
                     <h1 className='font-bold'>{title}</h1>
                     {/* <Input/> */}
-                    <div className='hidden md:flex items-center gap-1 border border-slate-200 dark:border-slate-500 rounded-full px-2 py-1 focus-within:border-slate-900 focus-within:ring-1 focus-within:ring-slate-900'>
+                    <div className='hidden md:flex items-center gap-1 border border-slate-200 dark:border-slate-100 rounded-full px-2 py-1 focus-within:border-slate-900 focus-within:ring-1 focus-within:ring-slate-900'>
                         <Search className='w-6 h-6 text-slate-700 dark:text-slate-100' />
                         <input type="text" placeholder='search'  className='bg-transparent focus:outline-none '/>
                     </div>

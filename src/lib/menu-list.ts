@@ -1,4 +1,24 @@
-import { Tag, Users, Settings, Bookmark, SquarePen, LayoutGrid, LucideIcon, GraduationCap, User, CircleUserRound, Baby } from 'lucide-react';
+import {
+    Tag,
+    Users,
+    Settings,
+    Bookmark,
+    SquarePen,
+    LayoutGrid,
+    LucideIcon,
+    GraduationCap,
+    User,
+    CircleUserRound,
+    Baby,
+    School,
+    CalendarCheck2,
+    CalendarDays,
+    BookOpenText,
+    NotebookPen,
+    UserCheck,
+    MessageCircleMore,
+    ListTodo
+} from 'lucide-react';
 
 type Submenu = {
     href: string;
@@ -56,23 +76,72 @@ export function getMenuList(pathname: string): Group[] {
                 }, */
                 {
                     href: '/teacher',
-                    label: 'Teacher',
+                    label: 'Teachers',
                     active: pathname.includes('/teacher'),
                     icon: GraduationCap,
                     submenus: []
                 },
                 {
                     href: '/parent',
-                    label: 'Parent',
+                    label: 'Parents',
                     active: pathname.includes('/parent'),
                     icon: Baby,
                     submenus: []
                 },
                 {
                     href: '/student',
-                    label: 'student',
+                    label: 'Students',
                     active: pathname.includes('/student'),
                     icon: Users,
+                    submenus: []
+                },
+                {
+                    href: '/class',
+                    label: 'Classes',
+                    active: pathname.includes('/class'),
+                    icon: School,
+                    submenus: []
+                },
+                {
+                    href: '/lesson',
+                    label: 'Lessons',
+                    active: pathname.includes('/lesson'),
+                    icon: BookOpenText,
+                    submenus: []
+                },
+                {
+                    href: '/exams',
+                    label: 'Exams',
+                    active: pathname.includes('/exam'),
+                    icon: NotebookPen,
+                    submenus: []
+                },
+                {
+                    href: '/assignment',
+                    label: 'Assignments',
+                    active: pathname.includes('/assignment'),
+                    icon: ListTodo,
+                    submenus: []
+                },
+                {
+                    href: '/attendance',
+                    label: 'attendance',
+                    active: pathname.includes('/attendance'),
+                    icon: UserCheck,
+                    submenus: []
+                },
+                {
+                    href: '/event',
+                    label: 'events',
+                    active: pathname.includes('/event'),
+                    icon: CalendarDays,
+                    submenus: []
+                },
+                {
+                    href: '/message',
+                    label: 'messages',
+                    active: pathname.includes('/message'),
+                    icon: MessageCircleMore,
                     submenus: []
                 }
             ]
