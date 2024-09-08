@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 
 import './globals.css';
 import { ThemeProvider } from '@/providers/theme-provider';
+import { TailwindIndicator } from '@/components/tailwind-indicator';
 
 const geistSans = localFont({
     src: './fonts/GeistVF.woff',
@@ -54,6 +55,7 @@ export default function RootLayout({
             <body className={geistSans.className}>
                 <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
                     {children}
+                    <TailwindIndicator />
                 </ThemeProvider>
             </body>
         </html>
