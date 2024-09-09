@@ -1,8 +1,5 @@
-import React from 'react';
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
     return (
         <div className='flex items-center gap-2'>
             <div className='flex flex-col items-center justify-center gap-1'>

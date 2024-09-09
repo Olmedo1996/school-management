@@ -1,24 +1,14 @@
-import { MegaphoneIcon, MessageCircleMore } from 'lucide-react';
-import React from 'react';
-import { LayoutGrid, LogOut, User } from 'lucide-react';
+import { MegaphoneIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip';
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import NotificationBadge from './notification-badge';
 
-type Props = {};
-
-export function Announcement(props: Props) {
+export function Announcement() {
     return (
         <>
             <DropdownMenu>

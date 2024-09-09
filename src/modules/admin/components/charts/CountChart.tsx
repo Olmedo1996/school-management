@@ -1,12 +1,10 @@
 'use client';
 
-import { RadialBar, RadialBarChart, PolarAngleAxis } from 'recharts';
+import { RadialBar, RadialBarChart } from 'recharts';
 
+import MaleFemaleIcon from '@/assets/image/svgs/male-famele';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
-import Footer from './footer';
-import { Users } from 'lucide-react';
-import MaleFemaleIcon from '@/assets/image/svgs/male-famele';
 
 export const description = 'A radial chart';
 

@@ -1,11 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import { LayoutGrid, LogOut, User } from 'lucide-react';
+import Link from 'next/link';
 
-import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from '@/components/ui/tooltip';
+import { Button } from '@/components/ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,

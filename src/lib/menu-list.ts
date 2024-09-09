@@ -1,23 +1,18 @@
 import {
-    Tag,
-    Users,
-    Settings,
-    Bookmark,
-    SquarePen,
-    LayoutGrid,
-    LucideIcon,
-    GraduationCap,
-    User,
-    CircleUserRound,
     Baby,
-    School,
-    CalendarCheck2,
-    CalendarDays,
     BookOpenText,
-    NotebookPen,
-    UserCheck,
+    CalendarDays,
+    CircleUserRound,
+    GraduationCap,
+    LayoutGrid,
+    ListTodo,
+    LucideIcon,
     MessageCircleMore,
-    ListTodo
+    NotebookPen,
+    School,
+    Settings,
+    UserCheck,
+    Users
 } from 'lucide-react';
 
 type Submenu = {
