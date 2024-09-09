@@ -50,12 +50,14 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
 				},
-			lamaSky: "#C3EBFA",
-			lamaSkyLight: "#EDF9FD",
-			lamaPurple: "#CFCEFF",
-			lamaPurpleLight: "#F1F0FF",
-			lamaYellow: "#FAE27C",
-			lamaYellowLight: "#FEFCE8",
+			lama: {
+				sky: "#C3EBFA",
+				skyLight: "#F1F0FF",
+				purple: "#CFCEFF",
+				purpleLight: "#F1F0FF",
+				yellow: "#FAE27C",
+				yellowLight: "#FEFCE8",
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

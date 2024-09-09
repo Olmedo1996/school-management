@@ -4,9 +4,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { cn } from '@/lib/utils';
 import { Ellipsis } from 'lucide-react';
 
-const UserCard = ({ type }: { type: string }) => {
+const UserCard = ({ type, className }: { type: string, className?: string }) => {
     return (
-        <Card className='w-full shadow-none odd:bg-lamaPurple even:bg-lamaYellow min-w-[130px] p-2'>
+        <Card className={cn('w-full shadow-none min-w-[130px] p-2', className)}>
+
             <CardHeader className='p-1 px-3 flex'>
                 <div className='flex items-center justify-between'>
                     <Badge>25/2024</Badge>
@@ -15,10 +16,10 @@ const UserCard = ({ type }: { type: string }) => {
                     </Button>
                 </div>
             </CardHeader>
-            <CardContent className='p-2 my-3'>
+            <CardContent className='p-4 my-3'>
                 <h1 className='text-2xl font-semibold'>1234</h1>
             </CardContent>
-            <CardFooter className='p-2'>
+            <CardFooter className='px-4'>
                 <CardDescription className='capitalize'>{type}</CardDescription>
             </CardFooter>
         </Card>
