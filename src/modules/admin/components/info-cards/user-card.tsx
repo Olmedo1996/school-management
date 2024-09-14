@@ -6,7 +6,7 @@ import { Ellipsis } from 'lucide-react';
 
 const UserCard = ({ type, className }: { type: string, className?: string }) => {
     return (
-        <Card className={cn('w-full shadow-none min-w-[130px] p-2', className)}>
+        <Card className={cn('w-full min-w-[130px] p-2', className)}>
 
             <CardHeader className='p-1 px-3 flex'>
                 <div className='flex items-center justify-between'>

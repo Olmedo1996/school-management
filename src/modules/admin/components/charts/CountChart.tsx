@@ -34,14 +34,14 @@ const chartConfig = {
 
 const CountChart = () => {
     return (
-        <Card className='flex flex-col'>
-            <CardHeader className='items-center pb-0'>
+        <Card className='h-full'>
+            <CardHeader className='items- pb-0'>
                 <CardTitle>Students</CardTitle>
                 <CardDescription>January - June 2024</CardDescription>
             </CardHeader>
             <CardContent className='flex-1 p-0 relative'>
                 <ChartContainer config={chartConfig} className='mx-auto aspect-square max-h-[250px]'>
-                    <RadialBarChart data={chartData} innerRadius={30} outerRadius={110}>
+                    <RadialBarChart data={chartData} innerRadius={30} >
                         
                         <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel nameKey='student' />} />
                         <RadialBar dataKey='count' background />
