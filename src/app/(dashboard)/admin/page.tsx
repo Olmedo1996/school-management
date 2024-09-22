@@ -1,4 +1,5 @@
 import { ContentLayout } from '@/components/admin-panel/content-layout';
+import Announcements from '@/modules/admin/components/announcements/announcements';
 import AttendanceChart from '@/modules/admin/components/charts/attendance-chart';
 import CountChart from '@/modules/admin/components/charts/count-chart';
 import Finance from '@/modules/admin/components/charts/finance';
@@ -28,8 +29,9 @@ const AdminPage = () => {
                         <Finance/>
                     </div>
                 </div>
-                <div className='sm:col-span-12 md:col-span-3 lg:col-span-4 '>
+                <div className='sm:col-span-12 md:col-span-3 lg:col-span-4'>
                     <Events />
+                    <Announcements />
                 </div>
             </div>
         </ContentLayout>

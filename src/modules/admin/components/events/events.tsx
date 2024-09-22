@@ -7,7 +7,7 @@ type Props = {};
 
 const Events = (props: Props) => {
     return (
-        <Card>
+        <Card className='mb-4'>
             <ResponsiveCalendar />
             <ListEvents />
         </Card>
