@@ -1,90 +1,70 @@
 'use client';
 
-import { TrendingUp } from 'lucide-react';
-import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts';
+import { TrendingUp } from "lucide-react"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import { ChartConfig, ChartContainer, ChartLegend, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 
-export const description = 'A stacked area chart';
+/* export const description = 'A radial chart'; */
 
 const chartData = [
-    { month: 'January', desktop: 186, mobile: 80 },
-    { month: 'February', desktop: 305, mobile: 200 },
-    { month: 'March', desktop: 237, mobile: 120 },
-    { month: 'April', desktop: 73, mobile: 190 },
-    { month: 'May', desktop: 209, mobile: 130 },
-    { month: 'June', desktop: 214, mobile: 140 }
+    { month: 'January', guys: 186, girls: 80 },
+    { month: 'February', guys: 305, girls: 200 },
+    { month: 'March', guys: 237, girls: 120 },
+    { month: 'April', guys: 73, girls: 190 },
+    { month: 'May', guys: 209, girls: 130 },
+    { month: 'June', guys: 214, girls: 140 }
 ];
 
 const chartConfig = {
-    desktop: {
-        label: 'Desktop',
+    guys: {
+        label: 'Guys',
         color: 'hsl(var(--chart-1))'
     },
-    mobile: {
-        label: 'Mobile',
+    girls: {
+        label: 'girls',
         color: 'hsl(var(--chart-2))'
     }
 } satisfies ChartConfig;
 
 const AttendanceChart = () => {
     return (
-        <Card className='h-full'>
-            <CardHeader>
-                <CardTitle>Student attendance</CardTitle>
-                <CardDescription>Showing total attendances for the last 6 months</CardDescription>
+        <Card >
+            <CardHeader className='items- pb-0'>
+                <CardTitle>Students</CardTitle>
+                <CardDescription>January - June a 2024</CardDescription>
             </CardHeader>
             <CardContent>
-                <ChartContainer config={chartConfig}>
-                    <AreaChart
-                        accessibilityLayer
-                        data={chartData}
-                        margin={{
-                            left: 12,
-                            right: 12
-                        }}
-                    >
-                        <CartesianGrid vertical={false} />
+                <ChartContainer config={chartConfig} className='mx-auto '>
+                    <BarChart accessibilityLayer data={chartData}>
+                        <CartesianGrid vertical={false}/>
                         <XAxis
                             dataKey='month'
                             tickLine={false}
+                            tickMargin={10}
                             axisLine={false}
-                            tickMargin={8}
                             tickFormatter={(value) => value.slice(0, 3)}
                         />
-                        <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='dot' />} />
-                        <Area
-                            dataKey='mobile'
-                            type='natural'
-                            fill='var(--color-mobile)'
-                            fillOpacity={0.4}
-                            stroke='var(--color-mobile)'
-                            stackId='a'
+                        <ChartLegend
+                            align='right'
+                            verticalAlign='top'
+                            wrapperStyle={{ paddingTop: '1px', paddingBottom: '10px', fontSize: '16px', fontWeight: 'bold', textTransform: 'capitalize' }}
                         />
-                        <Area
-                            dataKey='desktop'
-                            type='natural'
-                            fill='var(--color-desktop)'
-                            fillOpacity={0.4}
-                            stroke='var(--color-desktop)'
-                            stackId='a'
-                        />
-                    </AreaChart>
+                        <ChartTooltip cursor={false} content={<ChartTooltipContent indicator='dashed' />} />
+                        <Bar dataKey='guys' fill='hsl(var(--chart-1))' radius={4} />
+                        <Bar dataKey='girls' fill='hsl(var(--chart-2))' radius={4} />
+                    </BarChart>
                 </ChartContainer>
             </CardContent>
-            {/* <CardFooter>
-                <div className='flex w-full items-start gap-2 text-sm'>
-                    <div className='grid gap-2'>
-                        <div className='flex items-center gap-2 font-medium leading-none'>
-                            Trending up by 5.2% this month <TrendingUp className='h-4 w-4' />
-                        </div>
-                        <div className='flex items-center gap-2 leading-none text-muted-foreground'>January - June 2024</div>
-                    </div>
+            <CardFooter className='flex-col items-start gap-2 text-sm'>
+                <div className='flex gap-2 font-medium leading-none'>
+                    Trending up by 5.2% this month <TrendingUp className='h-4 w-4' />
                 </div>
-            </CardFooter> */}
+                <div className='leading-none text-muted-foreground'>Showing total visitors for the last 6 months</div>
+            </CardFooter>
         </Card>
     );
-}
+};
 
 export default AttendanceChart;

@@ -6,7 +6,7 @@ import MaleFemaleIcon from '@/assets/image/svgs/male-famele';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 
-export const description = 'A radial chart';
+/* export const description = 'A radial chart'; */
 
 const chartData = [
     { student: 'total', count: 475, fill: 'var(--color-total)' },
@@ -37,7 +37,7 @@ const CountChart = () => {
         <Card className='h-full'>
             <CardHeader className='items- pb-0'>
                 <CardTitle>Students</CardTitle>
-                <CardDescription>January - June 2024</CardDescription>
+                <CardDescription>January - June  a 2024</CardDescription>
             </CardHeader>
             <CardContent className='flex-1 p-0 relative'>
                 <ChartContainer config={chartConfig} className='mx-auto aspect-square max-h-[250px]'>
@@ -48,7 +48,6 @@ const CountChart = () => {
                     </RadialBarChart>
                 </ChartContainer>
                 <div className='absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-0'>
-                    {/* <Users size={48} className='text-gray-500' /> */}
                     <MaleFemaleIcon className='w-10 h-10'/>
                 </div>
             </CardContent>

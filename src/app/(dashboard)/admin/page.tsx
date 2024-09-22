@@ -1,6 +1,7 @@
 import { ContentLayout } from '@/components/admin-panel/content-layout';
 import AttendanceChart from '@/modules/admin/components/charts/attendance-chart';
-import CountChart from '@/modules/admin/components/charts/CountChart';
+import CountChart from '@/modules/admin/components/charts/count-chart';
+import Finance from '@/modules/admin/components/charts/finance';
 import UserCard from '@/modules/admin/components/info-cards/user-card';
 
 const AdminPage = () => {
@@ -21,6 +22,9 @@ const AdminPage = () => {
                         <div className='w-full lg:w-2/3'>
                             <AttendanceChart/>
                         </div>
+                    </div>
+                    <div className='h-full w-full'>
+                        <Finance/>
                     </div>
                 </div>
                 <div className='sm:col-span-12 md:col-span-3 lg:col-span-4 bg-lama-purple p-4 rounded-lg shadow'>
