@@ -2,6 +2,7 @@ import { ContentLayout } from '@/components/admin-panel/content-layout';
 import AttendanceChart from '@/modules/admin/components/charts/attendance-chart';
 import CountChart from '@/modules/admin/components/charts/count-chart';
 import Finance from '@/modules/admin/components/charts/finance';
+import Events from '@/modules/admin/components/events/events';
 import UserCard from '@/modules/admin/components/info-cards/user-card';
 
 const AdminPage = () => {
@@ -27,9 +28,8 @@ const AdminPage = () => {
                         <Finance/>
                     </div>
                 </div>
-                <div className='sm:col-span-12 md:col-span-3 lg:col-span-4 bg-lama-purple p-4 rounded-lg shadow'>
-                    <h2 className='text-lg font-semibold'>Barra Lateral</h2>
-                    <p>Este es el área de la barra lateral que se ajusta según el tamaño de la pantalla.</p>
+                <div className='sm:col-span-12 md:col-span-3 lg:col-span-4 '>
+                    <Events />
                 </div>
             </div>
         </ContentLayout>
