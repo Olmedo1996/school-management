@@ -90,3 +90,32 @@ lamaYellowLight: "#FEFCE8", 55, 92%, 95%
         @apply bg-background text-foreground;
     }
 }
+
+.rbc-btn-group {
+    button{
+        @apply !text-primary !text-sm !border !border-input !bg-background !shadow-sm hover:!bg-accent hover:!text-accent-foreground ;
+    }
+    .rbc-active{
+        @apply !bg-accent;    
+    }
+}
+
+.rbc-time-view{
+    @apply !border !border-input ;
+}
+
+/* .rbc-time-content{
+    @apply !border-0  ;
+}
+
+.rbc-timeslot-group{
+    @apply !border !border-input !bg-background !shadow-sm hover:!text-accent-foreground ;
+} */
+
+.rbc-time-content{
+    @apply !border  ;
+}
+
+.rbc-today{
+    @apply !text-primary !text-sm !border !border-input !bg-accent !shadow-sm hover:!bg-accent hover:!text-accent-foreground ;
+}

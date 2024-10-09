@@ -3,10 +3,12 @@ import {
     BookOpenText,
     CalendarDays,
     CircleUserRound,
+    FileCheck,
     GraduationCap,
     LayoutGrid,
     ListTodo,
     LucideIcon,
+    Megaphone,
     MessageCircleMore,
     NotebookPen,
     School,
@@ -21,12 +23,15 @@ type Submenu = {
     active: boolean;
 };
 
+type Visible = "admin" | "teacher" | "student" | "parent" | "staff";
+
 type Menu = {
     href: string;
     label: string;
     active: boolean;
     icon: LucideIcon;
     submenus: Submenu[];
+    visible?: Visible[];
 };
 
 type Group = {
@@ -44,7 +49,8 @@ export function getMenuList(pathname: string): Group[] {
                     label: 'Admin',
                     active: pathname.includes('/admin'),
                     icon: LayoutGrid,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 }
             ]
         },
@@ -74,70 +80,96 @@ export function getMenuList(pathname: string): Group[] {
                     label: 'Teachers',
                     active: pathname.includes('/teacher'),
                     icon: GraduationCap,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher"],
                 },
                 {
                     href: '/parent',
                     label: 'Parents',
                     active: pathname.includes('/parent'),
                     icon: Baby,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher"],
                 },
                 {
                     href: '/student',
                     label: 'Students',
                     active: pathname.includes('/student'),
                     icon: Users,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher"],
                 },
                 {
                     href: '/class',
                     label: 'Classes',
                     active: pathname.includes('/class'),
                     icon: School,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher"],
                 },
                 {
                     href: '/lesson',
                     label: 'Lessons',
                     active: pathname.includes('/lesson'),
                     icon: BookOpenText,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher"],
                 },
                 {
                     href: '/exams',
                     label: 'Exams',
                     active: pathname.includes('/exam'),
                     icon: NotebookPen,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
+                },
+                {
+                    href: '/results',
+                    label: 'Results',
+                    active: pathname.includes('/result'),
+                    icon: FileCheck,
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 },
                 {
                     href: '/assignment',
                     label: 'Assignments',
                     active: pathname.includes('/assignment'),
                     icon: ListTodo,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 },
                 {
                     href: '/attendance',
                     label: 'attendance',
                     active: pathname.includes('/attendance'),
                     icon: UserCheck,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 },
                 {
                     href: '/event',
                     label: 'events',
                     active: pathname.includes('/event'),
                     icon: CalendarDays,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 },
                 {
                     href: '/message',
-                    label: 'messages',
+                    label: 'Messages',
                     active: pathname.includes('/message'),
                     icon: MessageCircleMore,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
+                },
+                {
+                    href: '/announcement',
+                    label: 'Announcements',
+                    active: pathname.includes('/announcement'),
+                    icon: Megaphone,
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 }
             ]
         },
@@ -145,18 +177,20 @@ export function getMenuList(pathname: string): Group[] {
             groupLabel: 'Settings',
             menus: [
                 {
-                    href: '/users',
-                    label: 'Users',
-                    active: pathname.includes('/users'),
+                    href: '/profile',
+                    label: 'Profile',
+                    active: pathname.includes('/profile'),
                     icon: CircleUserRound,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 },
                 {
                     href: '/account',
                     label: 'Account',
                     active: pathname.includes('/account'),
                     icon: Settings,
-                    submenus: []
+                    submenus: [],
+                    visible: ["admin", "teacher", "student", "parent"],
                 }
             ]
         }

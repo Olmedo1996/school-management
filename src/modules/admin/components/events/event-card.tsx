@@ -14,7 +14,7 @@ export default function EventCard({ title, time, description, borderColor }: Eve
   borderColor: "bg-blue-500"
 }) {
   return (
-    <Card className="w-full max-w-md mb-2 overflow-hidden rounded-sm">
+    <Card className="w-full mb-2 overflow-hidden rounded-sm">
       <div className={`h-1 ${borderColor} rounded-t-full`} />
       <CardHeader className="pb-1 pt-3">
         <div className="flex justify-between items-center">

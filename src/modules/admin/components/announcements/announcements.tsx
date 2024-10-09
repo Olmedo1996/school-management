@@ -6,7 +6,7 @@ type Props = {};
 
 const Announcements = (props: Props) => {
     return (
-        <Card className='p-4'>
+        <Card className='p-4 w-full'>
            <AnnouncementsList/>
         </Card>
     );

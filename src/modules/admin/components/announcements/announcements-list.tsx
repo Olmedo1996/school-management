@@ -27,12 +27,12 @@ const announcements: AnnouncementsCardProps[] = [
 
 const AnnouncementsList = (props: Props) => {
     return (
-        <div>
+        <div className='w-full'>
             <div className="flex flex-row justify-between items-center mb-1">
                 <h1 className='text-xl font-semibold mb-2' >Announcements</h1>
                 <Ellipsis className="text-gray-500"/>
             </div>
-            <div className='flex flex-col'>
+            <div className='flex flex-col w-full'>
                 {announcements.map((announcement, index) => (
                     <AnnouncementsCard key={index} {...announcement} />
                 ))}
