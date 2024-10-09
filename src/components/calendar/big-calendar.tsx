@@ -13,7 +13,7 @@ type EventProps = {
     end: Date;
 };
 
-const BigCalendar = (events : EventProps[]) => {
+const BigCalendar = ({ events }: { events: EventProps[] }) => {
     const [view, setView] = useState<View>(Views.WORK_WEEK);
 
     const handleOnChangeView = (view: View) => setView(view);
